@@ -1,13 +1,23 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Название документа (страницы)</title>
+    <title>Лекции на практике</title>
+    <link rel="stylesheet" href="styles.css">
   </head>
 
   <body>
+    <header class="page-header">
+      <a href="index.html" class="page-header_logo">
+      <img class="page-header_logo-icon"/>
+      </a>
+      <nav class="page-header_nav">
+      <a href="#" class="page-header_nav-link"></a>
+      </nav>
+      <button type="button" class="page-header_btn btn">Kнoпкa</button>
+    </header>
     <h1>Заголовок страницы</h1>
-    <p>Параграф текста написаный через <b>"lorem</b></p>
-    <p>
+    <p>Параграф текста написаный через <b>"lorem"</b></p>
+    <p class="style1">
       Далеко-далеко за словесными горами в стране гласных и согласных живут,<br />
       рыбные тексты. Дороге, даже эта? Безопасную до предупредила правилами<br />
       страну наш парадигматическая речью. Продолжил, за запятой дал
@@ -17,7 +27,6 @@
     <img
       src="https://avatars.mds.yandex.net/i?id=a4621618cf1f95ef74dce3638f67efdc_l-7544543-images-thumbs"
       alt="Картинка котика"
-      width="500"
       title="Красивое"
     />
     <p>
@@ -30,7 +39,7 @@
       запятых вопроса заманивший до текстов заглавных толку? Взгляд раз пояс<br />
       заголовок коварных своего.
     </p>
-    <a href="#">Ссылка</a>
+    <a href="https://slowertk.github.io">Ссылка</a>
     <div>
         <p>Опубликовано: <time datetime="2012-12-23T08:23:11+07:00">сегодня</time></p>
         <p><time>1957-10-04</time> запущен первый искусственный спутник Земли.</p>
@@ -39,5 +48,8 @@
         <p><time>1963-06-16</time> первый полет женщины-космонавта.</p>
         <p><time>1969-07-21</time> высадка человека на Луну.</p>
     </div>
+
+    <button type="button" class="page-header__btn btn btn--red">Кнопка красная</button>
+
   </body>
 </html>
