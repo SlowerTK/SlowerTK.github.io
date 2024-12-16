@@ -1,16 +1,54 @@
 <!DOCTYPE html>
 <html lang="ru">
   @@include('blocks/head.html')
+
   <body class="body">
     @@include('blocks/page-header.html')
+
     <main class="main">
       <div class="home">
-        <!-- прочая разметка -->
-        <!-- prettier-ignore -->
+        <header class="main-header home__main-header">
+          <h1 class="main-header__title">Арт — пространство</h1>
+
+          <picture class="main-header__picture">
+            <img src="assets/images/lenni.svg" alt="Lenni" class="main-header__img"/>
+          </picture>
+
+          <p class="main-header__text">
+            для людей, горящих сердец и делом<br> 
+            место для настоящего
+          </p>
+          
+        </header>
+
+        @@include('blocks/offers.html', {"class": "home__offers"})
+        @@include('blocks/about.html', {class: 'home__about'})
+        @@include('blocks/upcoming.html', {class: 'home__upcoming'})
         @@include('blocks/blog-listing.html', {"class": "home__listing"})
-        <!-- прочая разметка -->
+        
+        @@include('blocks/contacts.html', {class: 'home__contacts'})
+        
+        <div class="doit home__doit">
+          <div class="doit__container">
+            <p class="doit__text">
+              <span class="doit__text-part-1">Просто делайте,</span>
+              <span class="doit__text-part-2">что нравится,</span>
+              <span class="doit__text-part-3">а мы вам поможем</span>
+            </p>
+          </div>
+        </div>
       </div>
     </main>
+
     @@include('blocks/page-footer.html')
+    
+    @@include('blocks/event-pp.html')
+
+
+    <script src="scripts/swiper.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAELqrLiMyWfM_wwckJndQzmO9XEzvw_SU&callback=soGoogleMapInitialize"></script>
+
+    
+    
   </body>
 </html>
