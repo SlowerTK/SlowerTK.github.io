@@ -1,42 +1,42 @@
 .btn {
-    display: inline-flex;
-    justify-content: center;
-    box-sizing: border-box;
-    padding: 15px 40px;
-    border: 1px solid #1f1e1e;
-    background-color: transparent;
-    outline: none;
-    color: #1f1e1e;
-    font-family: "Open Sans", sans-serif;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 20px;
-    text-align: center;
-    text-decoration: none;
-    transition: color 0.2s, background-color 0.2s, border-color 0.2s;
-    overflow: hidden;
-    cursor: pointer;
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 15px 40px;
+  border: 1px solid @black;
+  outline: none;
+  background-color: transparent;
+  color: @black;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.362;
+  text-align: center;
+  transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+  overflow: hidden;
 
-
-
-
-  &:hover {
-      @media(hover:hover) {
-          background-color: @black;
-          color: @white;
-      }
+  @media @bw650 {
+    font-size: 14px;
   }
 
   &--red {
-      color: @white;
-      background-color: @red;
-      border-color: @red;
+    border: none;
+    background-color: @red_BC;
+    color: @white;
 
-      &:hover {
-          @media(hover:hover) {
-              background-color: @red_dark;
-          }
-      }
+    &:disabled,
+    &[disabled] {
+      background-color: fade(@red_BC, 50%);
+    }
   }
 
+  &:hover {
+    @media(hover: hover) {
+      background-color: @black;
+      color: @white;
+    }
+  }
+
+  &:disabled,
+  &[disabled] {
+    pointer-events: none;
+  }
 }
